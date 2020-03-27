@@ -41,14 +41,14 @@ namespace PracticalDesignPatterns
         static void ImplementFactoryPattern()
         {
             IPizzaFactory pizzeriaA = new PizzaStoreFactory().GetPizzaMaker(Store.PizzeriaA);
-            string resultA = pizzeriaA.PlaceOrder(new CheesePizza());
-            Console.WriteLine(resultA);
+            var resultA = pizzeriaA.PlaceOrder(new CheesePizza());
+            Console.WriteLine(resultA.Description);
 
             Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
 
             IPizzaFactory pizzeriaB = new PizzaStoreFactory().GetPizzaMaker(Store.PizzeriaB);
-            string resultB = pizzeriaB.PlaceOrder(new VeggiePizza());
-            Console.WriteLine(resultB);
+            var resultB = pizzeriaB.PlaceOrder(new VeggiePizza());
+            Console.WriteLine(resultB.Description);
         }
     }
 }

@@ -33,10 +33,17 @@ namespace PracticalDesignPatterns.FactoryPattern.Stores
             return base.Cut();
         }
 
-        public string PlaceOrder(IPizzaVariety variety)
+        public Pizza PlaceOrder(IPizzaVariety variety)
         {
             Variety = variety;
-            return ProcessOrder();
+            string orderDescription = ProcessOrder();
+
+            return new Pizza(this.ToString(),Variety.Description, orderDescription);
+        }
+
+        public override string ToString()
+        {
+            return "Pizzeria A";
         }
     }
 }

@@ -9,6 +9,6 @@ namespace PracticalDesignPatterns.FactoryPattern.Stores
 {
     public interface IPizzaFactory
     {
-        string PlaceOrder(IPizzaVariety variety);
+        Pizza PlaceOrder(IPizzaVariety variety);
     }
 }

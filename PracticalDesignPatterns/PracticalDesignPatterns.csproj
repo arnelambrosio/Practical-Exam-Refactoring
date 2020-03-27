@@ -74,6 +74,7 @@
     <Compile Include="FactoryPattern\Packaging\PackagingFactory.cs" />
     <Compile Include="FactoryPattern\Packaging\PizzeriaAPackaging.cs" />
     <Compile Include="FactoryPattern\Packaging\PizzeriaBPackaging.cs" />
+    <Compile Include="FactoryPattern\Pizza.cs" />
     <Compile Include="FactoryPattern\Stores\IPizzaFactory.cs" />
     <Compile Include="FactoryPattern\Stores\PizzaStore.cs" />
     <Compile Include="FactoryPattern\Stores\PizzaStoreFactory.cs" />
