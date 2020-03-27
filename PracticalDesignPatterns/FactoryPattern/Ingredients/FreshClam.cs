@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public interface IIngredients
+    public class FreshClam : Clam
     {
-        Dictionary<IngredientsCategory, IList<string>> GetIngredients(Store store, PizzaVariety variety);
+        public override string Description => "Fresh Clam";
     }
 }

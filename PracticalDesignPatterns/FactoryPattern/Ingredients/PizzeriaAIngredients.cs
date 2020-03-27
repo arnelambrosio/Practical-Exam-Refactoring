@@ -8,14 +8,34 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
     public class PizzeriaAIngredients : IIgredientsProvider
     {
-        public Dictionary<IngredientsCategory,string> ProvideIngredients =>
-            new Dictionary<IngredientsCategory, string>()
+        public Cheese CreateCheese()
+        {
+            return new Mozarella();
+        }
+
+        public Clam CreateClam()
+        {
+            return new FrozenClam();
+        }
+
+        public Dough CreateDough()
+        {
+            return new ThinCrust();
+        }
+
+        public Sauce CreateSouce()
+        {
+            return new CherryTomato();
+        }
+
+        public IList<Veggies> CreateVeggies()
+        {
+            return new List<Veggies>()
             {
-                { IngredientsCategory.Cheese,  "Mozarella" },
-                { IngredientsCategory.Clam, "Frozen Clam" },
-                { IngredientsCategory.Dough, "Thin Crust" },
-                { IngredientsCategory.Sauce, "Cherry Tomato"},
-                { IngredientsCategory.Veggies, "Olives,Onions,Pepper"}
+                new Olives(),
+                new Onions(),
+                new BellPepper()
             };
+        }
     }
 }

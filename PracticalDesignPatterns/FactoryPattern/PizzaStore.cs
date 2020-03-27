@@ -1,4 +1,5 @@
 ﻿using PracticalDesignPatterns.FactoryPattern.Ingredients;
+using PracticalDesignPatterns.FactoryPattern.PizzaVarieties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern
 {
-    public abstract class PizzaBase
+    public abstract class PizzaStore
     {
-        internal PizzaVariety Variety;
         internal IIgredientsProvider Ingredients;
         internal IFlavor Flavor;
+        internal PizzaVariety Variety;
 
-        public PizzaBase(IIgredientsProvider ingredientsProvider, IFlavor flavor)
+        public PizzaStore(IIgredientsProvider ingredientsProvider, IFlavor flavor)
         {
             Ingredients = ingredientsProvider;
             Flavor = flavor;
@@ -37,7 +38,7 @@ namespace PracticalDesignPatterns.FactoryPattern
         public virtual string ProcessOrder()
         {
             StringBuilder result = new StringBuilder();
-            result.Append($"Prepare()\nPreparing Pizzeria A style {Variety.ToString()} Using\n{Prepare()}\n");
+            result.Append($"Prepare()\nPreparing Pizzeria A style {Variety.Description} Using\n{Prepare()}\n");
             result.Append($"Bake()\n{Bake()}\n");
             result.Append($"Cut()\n{Cut()}\n");
             result.Append($"Box()\n{Box()}\n\n\n");
@@ -48,7 +49,7 @@ namespace PracticalDesignPatterns.FactoryPattern
 
         public string Prepare()
         {
-            string flavor = Flavor.Add(Ingredients.ProvideIngredients, Variety);
+            string flavor = Flavor.Add(Ingredients, Variety);
             return flavor;
         }
     }

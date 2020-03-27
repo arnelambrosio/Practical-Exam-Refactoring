@@ -1,4 +1,5 @@
 ﻿using PracticalDesignPatterns.FactoryPattern.Ingredients;
+using PracticalDesignPatterns.FactoryPattern.PizzaVarieties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern
 {
-    public class PizzeriaA : PizzaBase, IPizzaFactory
+    public class PizzeriaA : PizzaStore, IPizzaFactory
     {
         public PizzeriaA() : base(
             new IngredientFactory().GetIngredients(Store.PizzeriaA),
@@ -30,9 +31,8 @@ namespace PracticalDesignPatterns.FactoryPattern
         }
 
         public string PlaceOrder(PizzaVariety variety)
-        { 
+        {
             Variety = variety;
-
             return ProcessOrder();
         }
     }

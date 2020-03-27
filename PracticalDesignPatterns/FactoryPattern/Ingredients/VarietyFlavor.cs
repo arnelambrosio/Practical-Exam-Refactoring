@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticalDesignPatterns.FactoryPattern.PizzaVarieties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,29 +9,33 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
     public class VarietyFlavor : IFlavor
     {
-        public string Add(Dictionary<IngredientsCategory, string> ingredients, PizzaVariety variety)
+        public string Add(IIgredientsProvider ing, PizzaVariety variety)
         {
             string flavor = "";
-            var ing = ingredients;
-            switch (variety)
+
+            Type type = variety.GetType();
+
+            if (type == typeof(CheesePizza))
             {
-                case PizzaVariety.Cheeze:
-                    flavor = $"{IngredientsCategory.Dough.ToString()}:{ing[IngredientsCategory.Dough]}," +
-                        $"{IngredientsCategory.Cheese.ToString()}:{ing[IngredientsCategory.Cheese]}," +
-                        $"{IngredientsCategory.Sauce.ToString()}:{ing[IngredientsCategory.Sauce]}," +
-                        $"{IngredientsCategory.Veggies.ToString()}:{ing[IngredientsCategory.Veggies]}";
-                    break;
-                case PizzaVariety.Clam:
-                    flavor = $"{IngredientsCategory.Dough.ToString()}:{ing[IngredientsCategory.Dough]}," +
-                        $"{IngredientsCategory.Clam.ToString()}:{ing[IngredientsCategory.Clam]}," +
-                        $"{IngredientsCategory.Sauce.ToString()}:{ing[IngredientsCategory.Sauce]}," +
-                        $"{IngredientsCategory.Cheese.ToString()}:{ing[IngredientsCategory.Cheese]}";
-                    break;
-                case PizzaVariety.Veggie:
-                    flavor = $"{IngredientsCategory.Dough.ToString()}:{ing[IngredientsCategory.Dough]}," +
-                        $"{IngredientsCategory.Sauce.ToString()}:{ing[IngredientsCategory.Sauce]}," +
-                        $"{IngredientsCategory.Veggies.ToString()}:{ing[IngredientsCategory.Veggies]}";
-                    break;
+                flavor = $"{IngredientsCategory.Dough.ToString()}:{ing.CreateDough().Description}," +
+                        $"{IngredientsCategory.Cheese.ToString()}:{ing.CreateCheese().Description}," +
+                        $"{IngredientsCategory.Sauce.ToString()}:{ing.CreateSouce().Description}," +
+                        $"{IngredientsCategory.Veggies.ToString()}:{string.Join(",", ing.CreateVeggies().Select(a => a.Description).ToList())}";
+            }
+
+            if (type == typeof(VeggiePizza))
+            {
+                flavor = $"{IngredientsCategory.Dough.ToString()}:{ing.CreateDough().Description}," +
+                        $"{IngredientsCategory.Sauce.ToString()}:{ing.CreateSouce().Description}," +
+                        $"{IngredientsCategory.Veggies.ToString()}:{string.Join(",", ing.CreateVeggies().Select(a => a.Description).ToList())}";
+            }
+
+            if (type == typeof(ClamPizza))
+            {
+                flavor = $"{IngredientsCategory.Dough.ToString()}:{ing.CreateDough().Description}," +
+                         $"{IngredientsCategory.Clam.ToString()}:{ing.CreateClam().Description}," +
+                        $"{IngredientsCategory.Sauce.ToString()}:{ing.CreateSouce().Description}," +
+                        $"{IngredientsCategory.Cheese.ToString()}:{ing.CreateCheese().Description}";
             }
 
             return flavor;

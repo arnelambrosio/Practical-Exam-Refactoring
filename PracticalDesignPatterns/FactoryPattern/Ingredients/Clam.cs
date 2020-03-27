@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public interface IIgredientsProvider
+    public abstract class Clam
     {
-        Cheese CreateCheese();
-        Clam CreateClam();
-        Dough CreateDough();
-        Sauce CreateSouce();
-        IList<Veggies> CreateVeggies();
+        public abstract string Description { get; }
+
     }
 }

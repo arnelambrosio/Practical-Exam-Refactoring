@@ -12,13 +12,6 @@ namespace PracticalDesignPatterns.FactoryPattern
         PizzeriaB
     }
 
-    public enum PizzaVariety
-    {
-        Cheeze,
-        Clam,
-        Veggie
-    }
-
     public enum IngredientsCategory
     {
         Cheese,

@@ -1,4 +1,6 @@
 ﻿using PracticalDesignPatterns.FactoryPattern;
+using PracticalDesignPatterns.FactoryPattern.Ingredients;
+using PracticalDesignPatterns.FactoryPattern.PizzaVarieties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,13 +40,13 @@ namespace PracticalDesignPatterns
         static void ImplementFactoryPattern()
         {
             IPizzaFactory pizzeriaA = new PizzaStoreFactory().GetPizzaMaker(Store.PizzeriaA);
-            string resultA = pizzeriaA.PlaceOrder(PizzaVariety.Cheeze);
-
+            string resultA = pizzeriaA.PlaceOrder(new CheesePizza());
             Console.WriteLine(resultA);
+
             Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
 
             IPizzaFactory pizzeriaB = new PizzaStoreFactory().GetPizzaMaker(Store.PizzeriaB);
-            string resultB = pizzeriaB.PlaceOrder(PizzaVariety.Veggie);
+            string resultB = pizzeriaB.PlaceOrder(new VeggiePizza());
             Console.WriteLine(resultB);
         }
     }

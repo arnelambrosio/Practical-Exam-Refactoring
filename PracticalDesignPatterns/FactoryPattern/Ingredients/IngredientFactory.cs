@@ -20,11 +20,20 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
                 case Store.PizzeriaB:
                     ing = new PizzeriaBIngredients();
                     break;
-                default:
-                    break;
             }
 
             return ing;
+        }
+
+        public override IIgredientsProvider GetIngredients(PizzaStore store)
+        {
+            if (store.GetType() == typeof(PizzeriaA))
+                return new PizzeriaAIngredients();
+
+            if (store.GetType() == typeof(PizzeriaB))
+                return new PizzeriaAIngredients();
+
+            return null;
         }
     }
 }

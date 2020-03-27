@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public interface IIgredientsProvider
+    public class ThinCrust : Dough
     {
-        Cheese CreateCheese();
-        Clam CreateClam();
-        Dough CreateDough();
-        Sauce CreateSouce();
-        IList<Veggies> CreateVeggies();
+        public override string Description => "Thin Crust";
     }
 }

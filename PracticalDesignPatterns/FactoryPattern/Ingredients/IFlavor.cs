@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticalDesignPatterns.FactoryPattern.PizzaVarieties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
     public interface IFlavor
     {
-        string Add(Dictionary<IngredientsCategory,string> ingredients, PizzaVariety variety);
+        string Add(IIgredientsProvider ingredients, PizzaVariety variety);
     }
 }
