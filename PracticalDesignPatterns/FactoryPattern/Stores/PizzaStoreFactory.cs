@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDesignPatterns.FactoryPattern
+namespace PracticalDesignPatterns.FactoryPattern.Stores
 {
-    public class PizzaStoreFactory : Pizzeria
+    public class PizzaStoreFactory
     {
        
-        public override IPizzaFactory GetPizzaMaker(Store storeType)
+        public IPizzaFactory GetPizzaMaker(Store storeType)
         {
             IPizzaFactory store = null;
 

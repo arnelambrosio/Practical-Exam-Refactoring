@@ -1,4 +1,5 @@
 ﻿using PracticalDesignPatterns.FactoryPattern.Ingredients;
+using PracticalDesignPatterns.FactoryPattern.Packaging;
 using PracticalDesignPatterns.FactoryPattern.PizzaVarieties;
 using System;
 using System.Collections.Generic;
@@ -6,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDesignPatterns.FactoryPattern
+namespace PracticalDesignPatterns.FactoryPattern.Stores
 {
     public abstract class PizzaStore
     {
         internal IIgredientsProvider Ingredients;
         internal IFlavor Flavor;
         internal IPizzaVariety Variety;
+        internal IBoxProvider Packaging;
 
-        public PizzaStore(IIgredientsProvider ingredientsProvider, IFlavor flavor)
+        public PizzaStore(IIgredientsProvider ingredientsProvider, IFlavor flavor, IBoxProvider packaging)
         {
             Ingredients = ingredientsProvider;
             Flavor = flavor;
+            Packaging = packaging;
         }
 
         public virtual string Bake()
@@ -27,7 +30,7 @@ namespace PracticalDesignPatterns.FactoryPattern
 
         public virtual string Box()
         {
-            return "Putting pizza in Red coloured box";
+            return $"Putting pizza in {Packaging.Color.Create()} coloured box";
         }
 
         public virtual string Cut()

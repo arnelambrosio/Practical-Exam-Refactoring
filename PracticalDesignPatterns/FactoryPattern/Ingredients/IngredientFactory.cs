@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticalDesignPatterns.FactoryPattern.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public class IngredientFactory : IngredientsBase
+    public class IngredientFactory : IIngredientsFactory
     {
-        public override IIgredientsProvider GetIngredients(Store storeType)
+        public IIgredientsProvider GetIngredients(Store storeType)
         {
             IIgredientsProvider ing = null;
 
@@ -25,7 +26,7 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
             return ing;
         }
 
-        public override IIgredientsProvider GetIngredients(PizzaStore store)
+        public IIgredientsProvider GetIngredients(PizzaStore store)
         {
             if (store.GetType() == typeof(PizzeriaA))
                 return new PizzeriaAIngredients();

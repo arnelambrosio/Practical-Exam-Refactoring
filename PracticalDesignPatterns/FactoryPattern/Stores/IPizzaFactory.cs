@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDesignPatterns.FactoryPattern
+namespace PracticalDesignPatterns.FactoryPattern.Stores
 {
     public interface IPizzaFactory
     {

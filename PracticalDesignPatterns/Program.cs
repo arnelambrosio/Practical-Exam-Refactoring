@@ -1,6 +1,7 @@
 ﻿using PracticalDesignPatterns.FactoryPattern;
 using PracticalDesignPatterns.FactoryPattern.Ingredients;
 using PracticalDesignPatterns.FactoryPattern.PizzaVarieties;
+using PracticalDesignPatterns.FactoryPattern.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;

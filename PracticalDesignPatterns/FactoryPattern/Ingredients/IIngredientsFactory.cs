@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public abstract class IngredientsBase
+    public interface IIngredientsFactory
     {
-        public abstract IIgredientsProvider GetIngredients(Store storeType);
-        public abstract IIgredientsProvider GetIngredients(PizzaStore store);
+        IIgredientsProvider GetIngredients(Store storeType);
     }
 }
