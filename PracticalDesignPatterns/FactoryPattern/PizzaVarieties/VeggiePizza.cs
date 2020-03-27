@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.PizzaVarieties
 {
-    public class VeggiePizza : PizzaVariety
+    public class VeggiePizza : IPizzaVariety
     {
-        public override string Description => "Veggie Pizza";
+        public string Description => "Veggie Pizza";
     }
 }

@@ -9,6 +9,6 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
     public interface IFlavor
     {
-        string Add(IIgredientsProvider ingredients, PizzaVariety variety);
+        string Add(IIgredientsProvider ingredients, IPizzaVariety variety);
     }
 }

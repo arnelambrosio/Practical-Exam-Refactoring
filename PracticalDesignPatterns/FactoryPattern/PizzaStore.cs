@@ -12,7 +12,7 @@ namespace PracticalDesignPatterns.FactoryPattern
     {
         internal IIgredientsProvider Ingredients;
         internal IFlavor Flavor;
-        internal PizzaVariety Variety;
+        internal IPizzaVariety Variety;
 
         public PizzaStore(IIgredientsProvider ingredientsProvider, IFlavor flavor)
         {

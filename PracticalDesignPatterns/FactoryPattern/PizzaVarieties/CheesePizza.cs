@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.PizzaVarieties
 {
-    public class CheesePizza : PizzaVariety
+    public class CheesePizza : IPizzaVariety
     {
-        public override string Description { get => "Cheese Pizza"; }
+        public string Description { get => "Cheese Pizza"; }
 
     }
 }

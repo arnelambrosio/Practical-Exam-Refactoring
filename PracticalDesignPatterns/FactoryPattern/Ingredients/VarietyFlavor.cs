@@ -9,7 +9,7 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
     public class VarietyFlavor : IFlavor
     {
-        public string Add(IIgredientsProvider ing, PizzaVariety variety)
+        public string Add(IIgredientsProvider ing, IPizzaVariety variety)
         {
             string flavor = "";
 

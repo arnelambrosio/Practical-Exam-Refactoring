@@ -30,7 +30,7 @@ namespace PracticalDesignPatterns.FactoryPattern
             return base.Cut();
         }
 
-        public string PlaceOrder(PizzaVariety variety)
+        public string PlaceOrder(IPizzaVariety variety)
         {
             Variety = variety;
             return ProcessOrder();

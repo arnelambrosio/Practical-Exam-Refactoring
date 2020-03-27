@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.PizzaVarieties
 {
-    public abstract class PizzaVariety
+    public interface IPizzaVariety
     {
-        public abstract string Description { get; }
-        public Dough Dough { get; set; }
-        public Sauce Sauce { get; set; }
+        string Description { get; }
     }
 }
