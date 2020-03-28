@@ -9,7 +9,8 @@ namespace PracticalDesignPatterns.FactoryPattern
     public enum Store
     {
         PizzeriaA,
-        PizzeriaB
+        PizzeriaB,
+        PizzeriaC
     }
 
     public enum IngredientsCategory

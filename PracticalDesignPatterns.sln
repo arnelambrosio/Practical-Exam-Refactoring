@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalDesignPatterns", "PracticalDesignPatterns\PracticalDesignPatterns.csproj", "{825884EA-0EE7-4023-8355-72D84E3C306F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{02D1E7CB-4BEC-4995-A60A-DCC867881E7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern.Test", "Test\FactoryPattern.Test\FactoryPattern.Test.csproj", "{10E4F647-52ED-4ADD-9D44-22F66E2608F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{825884EA-0EE7-4023-8355-72D84E3C306F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{825884EA-0EE7-4023-8355-72D84E3C306F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{825884EA-0EE7-4023-8355-72D84E3C306F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E4F647-52ED-4ADD-9D44-22F66E2608F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E4F647-52ED-4ADD-9D44-22F66E2608F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E4F647-52ED-4ADD-9D44-22F66E2608F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E4F647-52ED-4ADD-9D44-22F66E2608F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10E4F647-52ED-4ADD-9D44-22F66E2608F7} = {02D1E7CB-4BEC-4995-A60A-DCC867881E7B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {186E2621-BEA0-43C0-8B12-B324068ED155}
