@@ -80,7 +80,7 @@
     <Compile Include="FactoryPattern\Stores\PizzaStoreFactory.cs" />
     <Compile Include="FactoryPattern\PizzaVarieties\CheesePizza.cs" />
     <Compile Include="FactoryPattern\PizzaVarieties\ClamPizza.cs" />
-    <Compile Include="FactoryPattern\PizzaVarieties\PizzaVariety.cs" />
+    <Compile Include="FactoryPattern\PizzaVarieties\IPizzaVariety.cs" />
     <Compile Include="FactoryPattern\PizzaVarieties\VeggiePizza.cs" />
     <Compile Include="FactoryPattern\Stores\PizzeriaA.cs" />
     <Compile Include="FactoryPattern\Stores\PizzeriaB.cs" />
