@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public class IngredientFactory : IIngredientsFactory
+    public class StoreIngredientsFactory : IIngredientsFactory
     {
-        public IIgredientsProvider GetIngredients(Store storeType)
+        public IStoreIgredients GetIngredients(Store storeType)
         {
-            IIgredientsProvider ing = null;
+            IStoreIgredients ing = null;
 
             switch (storeType)
             {
@@ -26,7 +26,7 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
             return ing;
         }
 
-        public IIgredientsProvider GetIngredients(PizzaStore store)
+        public IStoreIgredients GetIngredients(PizzaStore store)
         {
             if (store.GetType() == typeof(PizzeriaA))
                 return new PizzeriaAIngredients();

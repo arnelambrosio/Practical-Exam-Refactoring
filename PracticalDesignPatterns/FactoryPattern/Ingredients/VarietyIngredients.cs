@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public class VarietyFlavor : IFlavor
+    public class VarietyIngredients : IIngredientMixer
     {
-        public string Add(IIgredientsProvider ing, IPizzaVariety variety)
+        public string Add(IStoreIgredients ing, IPizzaVariety variety)
         {
             string flavor = "";
 

@@ -12,8 +12,8 @@ namespace PracticalDesignPatterns.FactoryPattern.Stores
     public class PizzeriaA : PizzaStore, IPizzaFactory
     {
         public PizzeriaA() : base(
-            new IngredientFactory().GetIngredients(Store.PizzeriaA)
-            ,new VarietyFlavor()
+            new StoreIngredientsFactory().GetIngredients(Store.PizzeriaA)
+            ,new VarietyIngredients()
             ,new PizzeriaAPackaging()
             )
         {

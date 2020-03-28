@@ -11,12 +11,12 @@ namespace PracticalDesignPatterns.FactoryPattern.Stores
 {
     public abstract class PizzaStore
     {
-        internal IIgredientsProvider Ingredients;
-        internal IFlavor Flavor;
+        internal IStoreIgredients Ingredients;
+        internal IIngredientMixer Flavor;
         internal IPizzaVariety Variety;
         internal IBoxProvider Packaging;
 
-        public PizzaStore(IIgredientsProvider ingredientsProvider, IFlavor flavor, IBoxProvider packaging)
+        public PizzaStore(IStoreIgredients ingredientsProvider, IIngredientMixer flavor, IBoxProvider packaging)
         {
             Ingredients = ingredientsProvider;
             Flavor = flavor;

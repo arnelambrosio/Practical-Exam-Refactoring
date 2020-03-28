@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public class PizzeriaBIngredients : IIgredientsProvider
+    public class PizzeriaBIngredients : IStoreIgredients
     {
         public Cheese CreateCheese()
         {

@@ -8,6 +8,6 @@ namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
     public interface IIngredientsFactory
     {
-        IIgredientsProvider GetIngredients(Store storeType);
+        IStoreIgredients GetIngredients(Store storeType);
     }
 }

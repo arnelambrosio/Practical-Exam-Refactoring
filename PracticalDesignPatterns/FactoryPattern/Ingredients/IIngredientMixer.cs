@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Ingredients
 {
-    public interface IFlavor
+    public interface IIngredientMixer
     {
-        string Add(IIgredientsProvider ingredients, IPizzaVariety variety);
+        string Add(IStoreIgredients ingredients, IPizzaVariety variety);
     }
 }
