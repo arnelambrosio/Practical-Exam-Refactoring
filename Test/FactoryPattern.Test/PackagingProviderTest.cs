@@ -21,7 +21,7 @@ namespace FactoryPattern.Test
         [Test]
         public void Return_Null_When_Provider_Not_Exist()
         {
-            IBoxProvider box = new PackagingFactory().GetBoxProvider(Store.PizzeriaC);
+            IBoxProvider box = new BoxFactory().GetBoxProvider(Store.PizzeriaC);
 
             Assert.IsNull(box);
         }
@@ -29,7 +29,7 @@ namespace FactoryPattern.Test
         [Test]
         public void Return_Not_Null_When_Provider_Exist()
         {
-            IBoxProvider box = new PackagingFactory().GetBoxProvider(Store.PizzeriaA);
+            IBoxProvider box = new BoxFactory().GetBoxProvider(Store.PizzeriaA);
 
             Assert.IsNotNull(box);
         }

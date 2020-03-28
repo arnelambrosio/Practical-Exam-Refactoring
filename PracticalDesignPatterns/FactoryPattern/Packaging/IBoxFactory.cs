@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticalDesignPatterns.FactoryPattern.Packaging
 {
-    public interface IPackagingFactory
+    public interface IBoxFactory
     {
         IBoxProvider GetBoxProvider(Store store);
     }

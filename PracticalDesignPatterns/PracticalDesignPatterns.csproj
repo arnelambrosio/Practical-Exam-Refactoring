@@ -70,8 +70,8 @@
     <Compile Include="FactoryPattern\Packaging\Color\IColor.cs" />
     <Compile Include="FactoryPattern\Packaging\Color\Red.cs" />
     <Compile Include="FactoryPattern\Packaging\IBoxProvider.cs" />
-    <Compile Include="FactoryPattern\Packaging\IPackagingFactory.cs" />
-    <Compile Include="FactoryPattern\Packaging\PackagingFactory.cs" />
+    <Compile Include="FactoryPattern\Packaging\IBoxFactory.cs" />
+    <Compile Include="FactoryPattern\Packaging\BoxFactory.cs" />
     <Compile Include="FactoryPattern\Packaging\PizzeriaAPackaging.cs" />
     <Compile Include="FactoryPattern\Packaging\PizzeriaBPackaging.cs" />
     <Compile Include="FactoryPattern\Pizza.cs" />

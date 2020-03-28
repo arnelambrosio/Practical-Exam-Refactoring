@@ -30,7 +30,7 @@ namespace PracticalDesignPatterns.FactoryPattern.Stores
 
         public virtual string Box()
         {
-            return $"Putting pizza in {Packaging.Color.Create()} coloured box";
+            return $"Putting pizza in {Packaging.BoxColor.Create()} coloured box";
         }
 
         public virtual string Cut()

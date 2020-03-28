@@ -9,6 +9,6 @@ namespace PracticalDesignPatterns.FactoryPattern.Packaging
 {
     public interface IBoxProvider
     {
-        IColor Color { get;}
+        IColor BoxColor { get;}
     }
 }

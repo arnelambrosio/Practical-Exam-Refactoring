@@ -9,6 +9,6 @@ namespace PracticalDesignPatterns.FactoryPattern.Packaging
 {
     public class PizzeriaBPackaging : IBoxProvider
     {
-        public IColor Color => new Green();
+        public IColor BoxColor => new Green();
     }
 }
